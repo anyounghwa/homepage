@@ -1,0 +1,242 @@
+@charset "utf-8";
+/* 슬라이드  index*/
+
+.cover_cover  { 
+	position:relative; 
+	width:100%;
+	height:500px; 
+	/* overflow:hidden;  */
+	}
+
+
+	.slick-prev,
+	.slick-next
+	{
+		width:125px;
+		height:125px;
+	}
+	.slick-prev
+	{
+		left: 25px;
+		z-index: 10;
+	}
+	[dir='rtl'] .slick-prev
+	{
+		right: 25px;
+		left: auto;
+	}
+	.slick-prev:before
+	{
+		/* content: url(“이미지 주소”); */
+		content: url('../images/prev.png');
+		color:red;
+	}
+
+	/* dir='rtl' -> 문자의 방향, 아랍어의 경우 오른쪽에서 왼쪽으로 */
+	[dir='rtl'] .slick-prev:before
+
+	{
+		content: url('../images/prev.png');
+		color:red;
+	}
+	
+	.slick-next
+	{
+		right: 25px;
+	}
+	[dir='rtl'] .slick-next
+	{
+		right: auto;
+		left: 25px;
+	}
+	.slick-next:before
+	{
+		content:  url('../images/next.png');
+		color:red;
+	}
+	[dir='rtl'] .slick-next:before
+	{
+		content: url('../images/prev.png');
+		color:red;
+	}
+	
+	.slick-dots {
+		bottom:5px;
+		z-index: 10;
+	}
+
+	.slick-dots li {
+		float: left;
+		width:25%;
+		height:5px;
+		margin: 0px;
+	}
+
+	.slick-dots li button:before {
+		width: 100%;
+    	height: 5px;
+
+    	content: '';
+    	text-align: center;
+
+    	opacity: .25;
+    	background-color: black;
+	}
+
+
+/*내용 */
+.content {
+	position:relative;
+	margin-top:40px;
+	height:1000px;
+	text-align:center;
+}
+
+.content>h3{
+	font-size:40px;
+	letter-spacing:10px;
+}
+
+.content>p{
+	font-size:20px;
+	letter-spacing:5px;
+	margin-top:15px;
+}
+
+
+.labindex{
+	width:1210px;
+	margin:90px auto;
+	position:relative;
+	/* height:450px; */
+	/*border:1px solid red;*/
+}
+
+.labindex>p{
+	width:630px;
+	height:650px;
+	overflow:hidden;
+}
+.labindex>p:nth-child(1){
+	position:absolute;
+	top:0;
+	left:0;
+}
+.labindex>p:nth-child(2){
+	position:absolute;
+	right:0;
+	top:50px;
+}
+
+.labindex>p>img {
+	transform:scale(1.0);
+	transition:transform 1s;
+}
+.labindex>p>img:hover {
+	transform:scale(1.05);
+	cursor:pointer;
+}
+
+.content_bg{
+	width:100%;
+	height:300px;
+	background-color:#eeb3a3;
+	margin-top:520px;
+	position:absolute;
+	z-index:-10;
+}
+
+.labindex>p>a{
+	position:absolute;
+	bottom:80px;
+	left:220px;
+	background-color:rgba(251,181,60,0.85);
+	width:190px;
+	height:40px;
+	text-align:center;
+	box-sizing:border-box;
+	padding-top:9px;
+	color:#fff;
+}
+
+
+.labindex>p>a:hover{
+	opacity:0.5;
+}
+
+
+
+/* 배경이미지 */
+.img {
+	position:relative;
+	width:100%;
+	height:500px;
+	background:url(../images/coffee.jpg) no-repeat;
+	background-attachment:fixed;
+	background-size:cover;	
+}
+.img>p {
+	font-size:100px;
+	color:#fff;
+	text-align:center;
+	line-height:500px;
+}
+
+/* 롤링 */
+.gallery {
+	position:relative;	
+}
+
+h2 {
+	margin:50px auto;
+	text-align:center;
+	font-size:40px;
+	letter-spacing:10px;
+}
+	 
+.product{
+    position:relative;
+	width:1260px;
+	height:330px;
+	/*border:1px solid red;*/
+}
+.product>p{
+    position:absolute;
+	top:150px; 
+    z-index: 50;
+}
+
+.product_pre{
+    left:-40px;
+}
+
+.product_next{
+    right:-40px;
+}
+
+.product>div{
+    position:relative;
+	width:1260px;
+	height:330px;
+	overflow:hidden;
+}
+		 
+
+.product>div>ul{
+    position:relative;
+	left:0;
+    width:2880px;
+	
+}
+			 
+.product>div>ul>li{
+    float:left;
+    margin-right:20px;
+	text-align:center;
+}
+
+.product>div>ul:after{
+    content:"";
+	display:block;
+	clear:both;
+}
